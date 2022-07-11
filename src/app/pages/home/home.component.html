@@ -1,0 +1,59 @@
+
+<div class="centralizado">
+
+    <div class="cabecalho centralizado">
+        <div class="conteudoCabecalho centralizado container">
+            
+            <img src="./assets/logo.png" alt="" class="logoCabecalho">
+            <div class="barraPesquisa centralizado">
+                <input type="text" placeholder="Procurar" (keyup)="itemPesquisa($event)">
+                <button class="btnPesquisa backgroundImage" style="background-image: url('./assets/icons/btnPesquisa.png');"></button>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="capa centralizado ">
+        <div class="conteudoCapa centralizado container">
+            <img src="./assets/gazinho.png" alt="">
+            <div class="texto">
+                <h1>
+                    Seja bem-vindo<br>
+                    ao meu banco de imagens!
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="corpo centralizado">
+        <app-abre-imagem [(imagem)]="imagem" *ngIf="imagem" [(nome)]="nomeEscolhido" ></app-abre-imagem>
+        <div class="filtros centralizado container">
+            <div class="centralizado" style="margin-left: 0%;" (click)="tipo='Todos'" [ngClass]="{'filtroAtivo': tipo=='Todos'}" >Todos 
+                <div *ngIf="tipo=='Todos'" ></div>
+            </div>
+            <div class="centralizado" (click)="tipo='ra'" [ngClass]="{'filtroAtivo': tipo=='ra'}" > RA
+                <div *ngIf="tipo=='ra'" ></div>
+            </div>
+            <div class="centralizado" (click)="tipo='3d'" [ngClass]="{'filtroAtivo': tipo=='3d'}" >3D
+                <div *ngIf="tipo=='3d'" ></div>
+            </div>
+        </div>
+
+        <div class="conteudo centralizado container">
+
+            <div class="itens centralizado" *ngFor="let item of listaObjetos | filter: tipo | search: pesquisa"  >
+                <img src="./assets/icons/realidade.png" alt="" class="simbolo" *ngIf="item.Tipo == 'ra'" >
+                <img src="./assets/icons/img.png" alt="" class="simbolo" *ngIf="item.Tipo == '3d'">
+                <img [src]="item.Imagem" *ngIf="item.Tipo == 'ra'"  alt="" routerLink="/catalogo/{{item.Id}}/{{tiraEspaco(item.Nome)}}">
+                <img [src]="item.Imagem" alt="" *ngIf="item.Tipo == '3d'"  (click)="abreImagem(item.Imagem, item.Nome)">
+     
+                
+
+            </div>
+            
+        </div>
+        
+
+    </div>
+</div>
+

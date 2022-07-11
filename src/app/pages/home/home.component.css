@@ -1,0 +1,143 @@
+.cabecalho{
+    width: 100%;
+}
+.logoCabecalho{
+    width: 20%;
+    min-width: 150px;
+}
+.conteudoCabecalho{
+    margin-top: 2%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.barraPesquisa{
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-end;
+    margin-top: 0%;
+    min-width: 150px;
+    height: 8vw;
+    max-height: 40px;
+}
+.barraPesquisa input{
+    width: 50% !important;
+    min-width:120px;
+
+    border: 0px;
+    height: 8vw;
+    max-height: 40px;
+    border-radius: 7px;
+    padding: 2%;
+    margin-right: 2%;
+}
+.btnPesquisa{
+    width: 8vw;
+    height: 8vw;
+    border: 0px;
+    max-width: 40px;
+    max-height: 40px;
+}
+.capa{
+    margin-top: 20px;
+    width: 100%;
+    background: rgba(227, 6, 19, 0.75);
+}
+.conteudoCapa{
+    flex-direction: row;
+    max-height: 300px;
+}
+.conteudoCapa img{
+    width: 60%;
+    margin-top: -9%;
+}
+.conteudoCapa .texto h1{
+    font-family: 'kregular';
+    font-size:calc(12px + 1.2vw);
+    color: white;
+}
+.corpo{
+    position: relative;
+    margin-top: 20px;
+
+}
+.conteudo{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
+
+
+}
+.itens{
+    position: relative;
+    padding: 2%;
+    width: 20vw;
+    max-width: 250px;
+
+    min-width: 150px;
+    margin-bottom: 3%  !important;
+    margin-left: 2%;
+    height: 40vw;
+    max-height: 250px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.1),
+    inset 1px 1px 2px #fff;
+    background-color: white;
+    cursor: pointer;
+
+}
+.itens .simbolo{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 12%;
+    opacity: 0.2;
+}
+.itens:hover{
+    box-shadow: 0px 0px 10px  0px rgb(156, 156, 156);
+
+}
+.itens img{
+    width: 90%;
+    border-radius: 7px 7px 0px 0px;
+}
+.textoInfo{
+    margin-top: 5%;
+    padding: 2%;
+    font-weight: bold;
+    min-height: 100px;
+}
+.textoInfo h5{
+    font-size: 14px;
+    margin-bottom: 10%;
+    
+}
+.textoInfo p{
+    font-size: 10px;
+    color: rgb(155, 155, 155);
+    margin-top: -5%;
+}
+.filtros{
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-left: 2%;
+}
+.filtros div{
+    margin-left: 5%;
+    font-weight: bold;
+    color: rgb(155, 155, 155);
+    cursor: pointer;
+}
+
+.filtros div div{
+    width: 5px;
+    height: 5px;
+    background-color: #ed1c24;
+    border-radius: 100%;
+    
+}
+.filtroAtivo{
+    
+    color: #ed1c24 !important;
+}

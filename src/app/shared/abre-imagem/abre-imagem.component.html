@@ -1,0 +1,15 @@
+<div class="back centralizado">
+
+    <div class="conteudo centralizado">
+        <button class="botaoFechar" (click)='fechaImage()'>X</button>
+        <img [src]="imagem" alt="">
+        <div class="conteudoTexto centralizado">
+            <h1>{{nome}}</h1>
+            <a class="botoes centralizado" [href]="imagem" [download]="nome+'.png'" >
+                <button class="botaoMaior">baixar</button>
+                <button class="botaoMenor backgroundImage" style="background-image: url('./assets/icons/download.png')"></button>
+            </a>
+
+        </div>
+    </div>
+</div>
